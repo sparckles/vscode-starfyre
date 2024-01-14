@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Starfyre",
+  "scopeName": "source.starfyre",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#fyreHTML"
+    },
+    {
+      "include": "#fyrePython"
+    },
+    {
+      "include": "#fyreJavaScript"
+    },
+    {
+      "include": "#fyreCSS"
+    },
+    {
+      "include": "source.python"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.starfyre",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.starfyre",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.starfyre",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "fyreHTML": {
+      "patterns": [
+        {
+          "begin": "<pyxide.*>",
+          "end": "</pyxide>",
+          "name": "text.html.fyre",
+          "patterns": [
+            {
+              "include": "text.html.basic"
+            }
+          ]
+        }
+      ]
+    },
+    "fyrePython": {
+      "patterns": [
+        {
+          "begin": "^---client$",
+          "end": "^---$",
+          "name": "source.python.fyre",
+          "patterns": [
+            {
+              "include": "source.python"
+            }
+          ]
+        }
+      ]
+    },
+    "fyreJavaScript": {
+      "patterns": [
+        {
+          "begin": "<script.*>",
+          "end": "</script>",
+          "name": "source.js.fyre",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        }
+      ]
+    },
+    "fyreCSS": {
+      "patterns": [
+        {
+          "begin": "<style.*>",
+          "end": "</style>",
+          "name": "source.css.fyre",
+          "patterns": [
+            {
+              "include": "source.css"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+

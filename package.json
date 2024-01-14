@@ -1,0 +1,34 @@
+{
+  "name": "starfyre",
+  "displayName": "starfyre",
+  "description": "A vscode language extension for starfyre",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "starfyre",
+        "aliases": [
+          "Starfyre",
+          "starfyre"
+        ],
+        "extensions": [
+          ".fyre"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "starfyre",
+        "scopeName": "source.starfyre",
+        "path": "./syntaxes/starfyre.tmLanguage.json"
+      }
+    ]
+  }
+}
