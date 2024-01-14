@@ -1,7 +1,7 @@
 {
   "name": "starfyre",
   "displayName": "starfyre",
-  "description": "A vscode language extension for starfyre",
+  "description": "A VSCode extension for syntax highlighting Starfyre files.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
